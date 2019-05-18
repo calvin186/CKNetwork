@@ -15,6 +15,7 @@
 		3EA438D3228FD6AD00C0C672 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA438D2228FD6AD00C0C672 /* main.m */; };
 		3EA438DD228FD6AE00C0C672 /* CKNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA438DC228FD6AE00C0C672 /* CKNetworkTests.m */; };
 		3EA438E8228FD6AE00C0C672 /* CKNetworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA438E7228FD6AE00C0C672 /* CKNetworkUITests.m */; };
+		D51D6B5A9B60A474C740D4F6 /* Pods_CKNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44ACD0C1D3049765FCFC264 /* Pods_CKNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30D31878B4444BC624F548F4 /* Pods-CKNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKNetwork.debug.xcconfig"; path = "Target Support Files/Pods-CKNetwork/Pods-CKNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		3EA438C0228FD6AA00C0C672 /* CKNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA438C3228FD6AA00C0C672 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EA438C4228FD6AA00C0C672 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		3EA438E3228FD6AE00C0C672 /* CKNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CKNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA438E7228FD6AE00C0C672 /* CKNetworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKNetworkUITests.m; sourceTree = "<group>"; };
 		3EA438E9228FD6AE00C0C672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44ACD0C1D3049765FCFC264 /* Pods_CKNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44A68C0A71ED7561D64993D /* Pods-CKNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKNetwork.release.xcconfig"; path = "Target Support Files/Pods-CKNetwork/Pods-CKNetwork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51D6B5A9B60A474C740D4F6 /* Pods_CKNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		337DD3B4420E409D8A8634B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30D31878B4444BC624F548F4 /* Pods-CKNetwork.debug.xcconfig */,
+				F44A68C0A71ED7561D64993D /* Pods-CKNetwork.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3EA438B7228FD6AA00C0C672 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +100,8 @@
 				3EA438DB228FD6AE00C0C672 /* CKNetworkTests */,
 				3EA438E6228FD6AE00C0C672 /* CKNetworkUITests */,
 				3EA438C1228FD6AA00C0C672 /* Products */,
+				337DD3B4420E409D8A8634B1 /* Pods */,
+				8522A126231363F850570598 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +149,14 @@
 			path = CKNetworkUITests;
 			sourceTree = "<group>";
 		};
+		8522A126231363F850570598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E44ACD0C1D3049765FCFC264 /* Pods_CKNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EA438EC228FD6AE00C0C672 /* Build configuration list for PBXNativeTarget "CKNetwork" */;
 			buildPhases = (
+				DE31B8C60723E312B24AE992 /* [CP] Check Pods Manifest.lock */,
 				3EA438BC228FD6AA00C0C672 /* Sources */,
 				3EA438BD228FD6AA00C0C672 /* Frameworks */,
 				3EA438BE228FD6AA00C0C672 /* Resources */,
+				DB3E8C8B4A52FC7661F3B81E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB3E8C8B4A52FC7661F3B81E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CKNetwork/Pods-CKNetwork-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CKNetwork/Pods-CKNetwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE31B8C60723E312B24AE992 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CKNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EA438BC228FD6AA00C0C672 /* Sources */ = {
@@ -433,6 +507,7 @@
 		};
 		3EA438ED228FD6AE00C0C672 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30D31878B4444BC624F548F4 /* Pods-CKNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +524,7 @@
 		};
 		3EA438EE228FD6AE00C0C672 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F44A68C0A71ED7561D64993D /* Pods-CKNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

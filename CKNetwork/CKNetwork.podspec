@@ -25,7 +25,8 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-                   DESC
+                      基于AFNetworking的网络库封装，欢迎使用！
+                      DESC
 
   spec.homepage     = "https://github.com/calvin186/CKNetwork"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/calvin186/CKNetwork.git", :tag => s.version.to_s }
+  spec.source       = { :git => "https://github.com/calvin186/CKNetwork.git", :tag => spec.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,7 +118,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+  spec.frameworks = 'Foundation', 'UIKit'
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
