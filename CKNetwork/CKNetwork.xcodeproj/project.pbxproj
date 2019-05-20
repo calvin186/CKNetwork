@@ -53,6 +53,7 @@
 		3EA438E3228FD6AE00C0C672 /* CKNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CKNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA438E7228FD6AE00C0C672 /* CKNetworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKNetworkUITests.m; sourceTree = "<group>"; };
 		3EA438E9228FD6AE00C0C672 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EA438F622927B0100C0C672 /* CKNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKNetwork.h; sourceTree = "<group>"; };
 		E44ACD0C1D3049765FCFC264 /* Pods_CKNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44A68C0A71ED7561D64993D /* Pods-CKNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKNetwork.release.xcconfig"; path = "Target Support Files/Pods-CKNetwork/Pods-CKNetwork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +118,7 @@
 		3EA438C2228FD6AA00C0C672 /* CKNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				3EA438F622927B0100C0C672 /* CKNetwork.h */,
 				3EA438C3228FD6AA00C0C672 /* AppDelegate.h */,
 				3EA438C4228FD6AA00C0C672 /* AppDelegate.m */,
 				3EA438C6228FD6AA00C0C672 /* ViewController.h */,
