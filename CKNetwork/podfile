@@ -8,5 +8,6 @@ xcodeproj 'CKNetwork.xcodeproj'
 
 target 'CKNetwork' do
    pod 'AFNetworking', '~> 3.2.1'
+   pod 'MJExtension', '~> 3.0.17'
 end
 
