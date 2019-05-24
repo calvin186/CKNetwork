@@ -133,5 +133,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency "AFNetworking", "~> 3.2.1"
+  spec.dependency "MJExtension", "~> 3.0.17"
 
 end
