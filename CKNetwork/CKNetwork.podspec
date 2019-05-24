@@ -92,7 +92,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.public_header_files = "CKNetwork/CKNetwork/*.{h,m}"
-  spec.source_files  = "CKNetwork/NetworkCore/**/*.{h,m}"
+  spec.source_files  = "CKNetwork/CKNetwork/NetworkCore/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
 
 
