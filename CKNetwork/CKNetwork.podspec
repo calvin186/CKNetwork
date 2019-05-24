@@ -91,8 +91,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # spec.public_header_files = "CKNetwork/CKNetwork/*.{h.m}"
-  spec.source_files  = "CKNetwork/NetworkCore/**/*.{h.m}"
+  # spec.public_header_files = "CKNetwork/CKNetwork/*.{h,m}"
+  spec.source_files  = "CKNetwork/NetworkCore/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
 
 

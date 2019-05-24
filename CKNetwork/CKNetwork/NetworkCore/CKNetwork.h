@@ -9,5 +9,7 @@
 #ifndef CKNetwork_h
 #define CKNetwork_h
 
+#import "CKRequest.h"
+#import "CKResponse.h"
 
 #endif /* CKNetwork_h */

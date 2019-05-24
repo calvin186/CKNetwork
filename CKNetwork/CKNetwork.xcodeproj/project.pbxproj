@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E41B4D72297E8B700CC53D2 /* CKOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E41B4C72297E8B500CC53D2 /* CKOperationQueue.m */; };
+		3E41B4D82297E8B700CC53D2 /* CKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E41B4CB2297E8B500CC53D2 /* CKRequest.m */; };
+		3E41B4DB2297E8B700CC53D2 /* CKParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E41B4D12297E8B600CC53D2 /* CKParameters.m */; };
+		3E41B4DC2297E8B700CC53D2 /* CKHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E41B4D52297E8B700CC53D2 /* CKHttpClient.m */; };
+		3E41B4DD2297E8B700CC53D2 /* CKResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E41B4D62297E8B700CC53D2 /* CKResponse.m */; };
 		3EA438C5228FD6AA00C0C672 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA438C4228FD6AA00C0C672 /* AppDelegate.m */; };
 		3EA438C8228FD6AA00C0C672 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA438C7228FD6AA00C0C672 /* ViewController.m */; };
 		3EA438CB228FD6AA00C0C672 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA438C9228FD6AA00C0C672 /* Main.storyboard */; };
@@ -38,6 +43,18 @@
 /* Begin PBXFileReference section */
 		30D31878B4444BC624F548F4 /* Pods-CKNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKNetwork.debug.xcconfig"; path = "Target Support Files/Pods-CKNetwork/Pods-CKNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		3E41B4C62297E64A00CC53D2 /* CKNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKNetwork.h; sourceTree = "<group>"; };
+		3E41B4C72297E8B500CC53D2 /* CKOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKOperationQueue.m; sourceTree = "<group>"; };
+		3E41B4C82297E8B500CC53D2 /* CKHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKHttpClient.h; sourceTree = "<group>"; };
+		3E41B4C92297E8B500CC53D2 /* CKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRequest.h; sourceTree = "<group>"; };
+		3E41B4CA2297E8B500CC53D2 /* CKOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKOperationQueue.h; sourceTree = "<group>"; };
+		3E41B4CB2297E8B500CC53D2 /* CKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKRequest.m; sourceTree = "<group>"; };
+		3E41B4CC2297E8B600CC53D2 /* CKRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKRequestDelegate.h; sourceTree = "<group>"; };
+		3E41B4D02297E8B600CC53D2 /* CKNetConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKNetConstants.h; sourceTree = "<group>"; };
+		3E41B4D12297E8B600CC53D2 /* CKParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKParameters.m; sourceTree = "<group>"; };
+		3E41B4D32297E8B700CC53D2 /* CKParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKParameters.h; sourceTree = "<group>"; };
+		3E41B4D42297E8B700CC53D2 /* CKResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKResponse.h; sourceTree = "<group>"; };
+		3E41B4D52297E8B700CC53D2 /* CKHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKHttpClient.m; sourceTree = "<group>"; };
+		3E41B4D62297E8B700CC53D2 /* CKResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKResponse.m; sourceTree = "<group>"; };
 		3EA438C0228FD6AA00C0C672 /* CKNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA438C3228FD6AA00C0C672 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EA438C4228FD6AA00C0C672 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +114,18 @@
 			isa = PBXGroup;
 			children = (
 				3E41B4C62297E64A00CC53D2 /* CKNetwork.h */,
+				3E41B4C92297E8B500CC53D2 /* CKRequest.h */,
+				3E41B4CB2297E8B500CC53D2 /* CKRequest.m */,
+				3E41B4D42297E8B700CC53D2 /* CKResponse.h */,
+				3E41B4D62297E8B700CC53D2 /* CKResponse.m */,
+				3E41B4C82297E8B500CC53D2 /* CKHttpClient.h */,
+				3E41B4D52297E8B700CC53D2 /* CKHttpClient.m */,
+				3E41B4D32297E8B700CC53D2 /* CKParameters.h */,
+				3E41B4D12297E8B600CC53D2 /* CKParameters.m */,
+				3E41B4D02297E8B600CC53D2 /* CKNetConstants.h */,
+				3E41B4CC2297E8B600CC53D2 /* CKRequestDelegate.h */,
+				3E41B4CA2297E8B500CC53D2 /* CKOperationQueue.h */,
+				3E41B4C72297E8B500CC53D2 /* CKOperationQueue.m */,
 			);
 			path = NetworkCore;
 			sourceTree = "<group>";
@@ -345,7 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E41B4D82297E8B700CC53D2 /* CKRequest.m in Sources */,
 				3EA438C8228FD6AA00C0C672 /* ViewController.m in Sources */,
+				3E41B4DB2297E8B700CC53D2 /* CKParameters.m in Sources */,
+				3E41B4DD2297E8B700CC53D2 /* CKResponse.m in Sources */,
+				3E41B4DC2297E8B700CC53D2 /* CKHttpClient.m in Sources */,
+				3E41B4D72297E8B700CC53D2 /* CKOperationQueue.m in Sources */,
 				3EA438D3228FD6AD00C0C672 /* main.m in Sources */,
 				3EA438C5228FD6AA00C0C672 /* AppDelegate.m in Sources */,
 			);
