@@ -11,30 +11,30 @@
 /*!
  *  网络请求方法
  */
-typedef NS_ENUM(NSInteger, PCHttpMethod) {
-    PCHttpMethodNone = 0,
-    PCHttpMethodPost,
-    PCHttpMethodGet
+typedef NS_ENUM(NSInteger, CKHttpMethod) {
+    CKHttpMethodNone = 0,
+    CKHttpMethodPost,
+    CKHttpMethodGet
 };
 
-typedef NS_ENUM(NSInteger, PCTaskType) {
-    PCTaskData = 0,         //数据请求
-    PCTaskDownload = 1,     //下载
-    PCTaskUpload = 2        //上传
+typedef NS_ENUM(NSInteger, CKTaskType) {
+    CKTaskData = 0,         //数据请求
+    CKTaskDownload = 1,     //下载
+    CKTaskUpload = 2        //上传
 };
-typedef NS_ENUM(NSInteger, PCPostParameterType) {
-    PCPostParameterFormData,      //以from表单方式提交
-    PCPostParameterJson,          //以JSON格式提交
-    PCPostParameterWithNoKeyJson, //以无参数JSON格式提交，例如:直接提交一个数组JSON
+typedef NS_ENUM(NSInteger, CKPostParameterType) {
+    CKPostParameterFormData,      //以from表单方式提交
+    CKPostParameterJson,          //以JSON格式提交
+    CKPostParameterWithNoKeyJson, //以无参数JSON格式提交，例如:直接提交一个数组JSON
 };
 
 /*!
  *  线程池优先级
  */
-typedef NS_ENUM(NSInteger, PCThreadPoolPriority) {
-    PCThreadPoolPriorityDefault = 0,
-    PCThreadPoolPriorityHigh,
-    PCThreadPoolPriorityLow
+typedef NS_ENUM(NSInteger, CKThreadPoolPriority) {
+    CKThreadPoolPriorityDefault = 0,
+    CKThreadPoolPriorityHigh,
+    CKThreadPoolPriorityLow
 };
 
 @interface CKHttpClient : NSObject
@@ -42,17 +42,17 @@ typedef NS_ENUM(NSInteger, PCThreadPoolPriority) {
 /*!
  *  网络请求的方法
  */
-@property(nonatomic, assign) PCHttpMethod method;
+@property(nonatomic, assign) CKHttpMethod method;
 
 /*!
  *  网络请求的方法
  */
-@property(nonatomic, assign) PCPostParameterType parameterType;
+@property(nonatomic, assign) CKPostParameterType parameterType;
 
 /*!
- *  任务类型，默认为PCTaskData
+ *  任务类型，默认为CKTaskData
  */
-@property(nonatomic, assign) PCTaskType taskType;
+@property(nonatomic, assign) CKTaskType taskType;
 
 /*!
  *  网络请求的服务器地址
@@ -62,7 +62,7 @@ typedef NS_ENUM(NSInteger, PCThreadPoolPriority) {
 /*!
  *  网络请求的get参数
  */
-@property(strong, nonatomic, readonly) CKParameters *parameters;
+@property(strong, nonatomic, readonly) CKParameters *getParameters;
 
 /*!
  *  网络请求的post参数
@@ -75,12 +75,12 @@ typedef NS_ENUM(NSInteger, PCThreadPoolPriority) {
 @property(strong, nonatomic, readonly) CKParameters *fileParameters;
 
 /*!
- *  网络请求的参数
+ *  网络请求的header参数
  */
 @property(strong, nonatomic, readonly) CKParameters *headers;
 
 /*!
- *  网络请求超时时间
+ *  网络请求超时时间，默认15秒
  */
 @property(nonatomic, assign) NSTimeInterval timeOut;
 
@@ -101,35 +101,35 @@ typedef NS_ENUM(NSInteger, PCThreadPoolPriority) {
  *
  *  @param parameters 可变参数集合类
  */
-- (void)buildAppendParameters:(PCMutableParameters*)parameters;
+- (void)buildAppendParameters:(CKMutableParameters*)parameters;
 
 /*!
  *  构建get请求参数
  *
  *  @param parameters 可变参数集合类
  */
-- (void)buildParameters:(PCMutableParameters*)parameters;
+- (void)buildGetParameters:(CKMutableParameters*)parameters;
 
 /**
  *  构建post请求参数
  *
  *  @param parameters 参数集合类
  */
-- (void)buildPostParameters:(PCMutableParameters *)parameters;
+- (void)buildPostParameters:(CKMutableParameters *)parameters;
 
 /**
  *  构建上传文件参数
  *
  *  @param parameters 文件参数集合（参数名+文件路径）
  */
-- (void)buildFileParameters:(PCMutableParameters *)parameters;
+- (void)buildFileParameters:(CKMutableParameters *)parameters;
 
 /*!
  *  构建请求header参数
  *
  *  @param headers 可变参数集合类
  */
-- (void)buildHeaders:(PCMutableParameters *)headers;
+- (void)buildHeaders:(CKMutableParameters *)headers;
 
 /*!
  *  重置请求参数

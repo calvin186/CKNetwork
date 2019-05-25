@@ -75,7 +75,7 @@
 /*!
  *  可变参数集合类
  */
-@interface PCMutableParameters : CKParameters {
+@interface CKMutableParameters : CKParameters {
 }
 /*!
  *  新增一个参数

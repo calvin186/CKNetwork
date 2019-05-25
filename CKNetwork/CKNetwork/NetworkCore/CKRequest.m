@@ -37,22 +37,22 @@
     [super cancel];
 }
 
-- (void)buildAppendParameters:(PCMutableParameters*)parameters {
-    NSDictionary *getParameters = [self parameters].dictionary;
+- (void)buildAppendParameters:(CKMutableParameters*)parameters {
+    NSDictionary *getParameters = [self getParameters].dictionary;
     [getParameters enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         [parameters addParameter:obj forKey:key];
     }];
 }
 
-- (void)buildParameters:(PCMutableParameters*)parameters {
-    [super buildParameters:parameters];
+- (void)buildGetParameters:(CKMutableParameters*)parameters {
+    [super buildGetParameters:parameters];
 }
 
-- (void)buildPostParameters:(PCMutableParameters *)parameters {
+- (void)buildPostParameters:(CKMutableParameters *)parameters {
     [super buildPostParameters:parameters];
 }
 
-- (void)buildHeaders:(PCMutableParameters *)headers {
+- (void)buildHeaders:(CKMutableParameters *)headers {
     [super buildHeaders:headers];
 }
 
@@ -77,7 +77,7 @@
     }
     //NSError *error = nil;
     //NSLog(@">>>%@:%@",NSStringFromClass(responseClass),[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
-    CKResponse *response = nil;//[[responseClass alloc] initWithString:[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] error:&error];
+    CKResponse *response = [responseClass mj_objectWithKeyValues:responseData];
     if ([NSThread isMainThread]) {
         [self requestCompleted:response];
     }

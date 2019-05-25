@@ -8,16 +8,14 @@
 
 #import "CKResponse.h"
 
-@interface CKResponse ()
-
-@property (nonatomic, strong) NSString *jsonString;
-
-@end
-
 @implementation CKResponse
++ (instancetype)mj_objectWithKeyValues:(id)keyValues {
+    CKResponse *response = [self mj_objectWithKeyValues:keyValues];
+    return response;
+}
 
 - (NSString *)description {
-    return _jsonString;
+    return [[NSString alloc] initWithData:self.mj_JSONData encoding:NSUTF8StringEncoding];
 }
 
 @end

@@ -15,22 +15,22 @@
 @end
 
 @implementation CKHttpClient {
-    PCMutableParameters *_parameters;
-    PCMutableParameters *_postParameters;
-    PCMutableParameters *_fileParameters;
-    PCMutableParameters *_headers;
+    CKMutableParameters *_getParameters;
+    CKMutableParameters *_postParameters;
+    CKMutableParameters *_fileParameters;
+    CKMutableParameters *_headers;
 }
 
 - (id)init {
     self = [super init];
     if (self) {
-        _method = PCHttpMethodGet;
-        _parameters = [[PCMutableParameters alloc] init];
-        _postParameters = [[PCMutableParameters alloc] init];
-        _fileParameters = [[PCMutableParameters alloc] init];
-        _headers = [[PCMutableParameters alloc] init];
+        _method = CKHttpMethodGet;
+        _getParameters = [[CKMutableParameters alloc] init];
+        _postParameters = [[CKMutableParameters alloc] init];
+        _fileParameters = [[CKMutableParameters alloc] init];
+        _headers = [[CKMutableParameters alloc] init];
         _timeOut = 15;
-        _taskType = PCTaskData;
+        _taskType = CKTaskData;
         _httpSessionManager = [AFHTTPSessionManager manager];
         _httpSessionManager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         _httpSessionManager.requestSerializer=[AFJSONRequestSerializer serializer];
@@ -49,10 +49,10 @@
     [self cancel];
 }
 
-- (CKParameters *)parameters {
-    [_parameters clearAllParameter];
-    [self buildParameters:_parameters];
-    return _parameters;
+- (CKParameters *)getParameters {
+    [_getParameters clearAllParameter];
+    [self buildGetParameters:_getParameters];
+    return _getParameters;
 }
 
 - (CKParameters *)postParameters {
@@ -82,12 +82,12 @@
 - (BOOL)send {
     _httpSessionManager.requestSerializer.timeoutInterval = _timeOut;
     NSDictionary *businessHeaders = nil;
-//    if (self.method == PCHttpMethodGet) {
+//    if (self.method == CKHttpMethodGet) {
 //        businessHeaders = [apiSign buildCommenSignWithParameters:[self parameters].dictionary];
 //    }else{
-//        if (self.parameterType == PCPostParameterFormData) {
+//        if (self.parameterType == CKPostParameterFormData) {
 //            businessHeaders = [apiSign buildCommenSignWithParameters:[self parameters].dictionary];
-//        }else if (self.parameterType == PCPostParameterJson) {
+//        }else if (self.parameterType == CKPostParameterJson) {
 //            businessHeaders = [apiSign buildJSONSignWithParameters:[self postParameters].dictionary];
 //        }else {
 //            businessHeaders = [apiSign buildJSONSignWithParameters:[self postNoKeyParameters].parameterValue];
@@ -106,11 +106,11 @@
     }
     
     NSURL* requestURL = [self buildRequestURL];
-    //PCLog(@"url:%@",requestURL.absoluteString);
+    //CKLog(@"url:%@",requestURL.absoluteString);
     __weak CKHttpClient *weakself = self;
-    if(_method == PCHttpMethodPost){
+    if(_method == CKHttpMethodPost){
         //处理参数
-        if (self.parameterType == PCPostParameterFormData) {
+        if (self.parameterType == CKPostParameterFormData) {
             [_httpSessionManager POST:requestURL.absoluteString parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
                 [[weakself.postParameters dictionary] enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
                     if ([obj isKindOfClass:[NSString class]]) {
@@ -131,7 +131,7 @@
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 [weakself networkError:error];
             }];
-        }else if (self.parameterType == PCPostParameterJson) {
+        }else if (self.parameterType == CKPostParameterJson) {
             [_httpSessionManager POST:requestURL.absoluteString parameters:_postParameters.dictionary progress:^(NSProgress * _Nonnull uploadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -148,7 +148,7 @@
                 [weakself networkError:error];
             }];
         }
-    }else if(_method==PCHttpMethodGet){
+    }else if(_method==CKHttpMethodGet){
         [_httpSessionManager GET:requestURL.absoluteString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -166,9 +166,9 @@
 
 - (NSString* )methodString {
     switch (self.method) {
-        case PCHttpMethodPost:
+        case CKHttpMethodPost:
             return @"POST";
-        case PCHttpMethodGet:
+        case CKHttpMethodGet:
             return @"GET";
         default:
             @throw [NSException exceptionWithName:@"参数不正确" reason:@"HTTP方法不能为空" userInfo:nil];
@@ -187,13 +187,13 @@
 }
 
 - (void)resetParameters {
-    [_parameters clearAllParameter];
-    [self buildParameters:_parameters];
+    [_getParameters clearAllParameter];
+    [self buildGetParameters:_getParameters];
 }
 
 - (NSURL*)buildRequestURL {
     NSMutableString *serverURL = [NSMutableString stringWithString:[self buildRequestURLString]];
-    NSString *parameters = [_parameters buildParameters];
+    NSString *parameters = [_getParameters buildParameters];
     NSString *suffixStr = [serverURL substringFromIndex:[serverURL length] - 1];
     NSString *formatStr;
     if ([suffixStr isEqualToString:@"?"] || [suffixStr isEqualToString:@"&"])
@@ -209,27 +209,27 @@
     return nil;
 }
 
-- (void)buildAppendParameters:(PCMutableParameters*)parameters {
+- (void)buildAppendParameters:(CKMutableParameters*)parameters {
     
 }
 
-- (void)buildParameters:(PCMutableParameters *)parameters {
+- (void)buildGetParameters:(CKMutableParameters *)parameters {
     
 }
 
-- (void)buildPostParameters:(PCMutableParameters *)parameters {
+- (void)buildPostParameters:(CKMutableParameters *)parameters {
     
 }
 
-- (void)buildPostNoKeyParameters:(PCMutableParameters *)parameters {
+- (void)buildPostNoKeyParameters:(CKMutableParameters *)parameters {
     
 }
 
-- (void)buildFileParameters:(PCMutableParameters *)parameters {
+- (void)buildFileParameters:(CKMutableParameters *)parameters {
     
 }
 
-- (void)buildHeaders:(PCMutableParameters *)headers {
+- (void)buildHeaders:(CKMutableParameters *)headers {
     
 }
 

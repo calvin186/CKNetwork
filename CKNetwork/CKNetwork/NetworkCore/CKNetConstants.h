@@ -1,5 +1,5 @@
 //
-//  PCConstants.h
+//  CKConstants.h
 //  Common
 //
 //  Created by calvin on 15/9/17.
@@ -11,4 +11,4 @@
 #define SHORTVERSION [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]
 
 //平台参数
-#define PCPLATFORM @"ios"
+#define CKPLATFORM @"ios"

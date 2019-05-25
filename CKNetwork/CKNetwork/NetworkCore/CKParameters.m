@@ -95,7 +95,7 @@
 
 @end
 
-@implementation PCMutableParameters
+@implementation CKMutableParameters
 
 - (void)addParameter:(id)value forKey:(NSString *)key {
     if (!key) {

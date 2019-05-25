@@ -11,9 +11,9 @@
 #import "CKRequestDelegate.h"
 #import <UIKit/UIDevice.h>
 
-typedef NS_ENUM(NSInteger,PCPlatform) {
-    PCPlatformIOS = 1,  //IOS平台
-    PCPlatformWeb = 2   //Web
+typedef NS_ENUM(NSInteger,CKPlatform) {
+    CKPlatformIOS = 1,  //IOS平台
+    CKPlatformWeb = 2   //Web
 };
 
 /*!
